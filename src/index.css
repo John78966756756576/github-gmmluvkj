@@ -1,3 +1,33 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@keyframes float-across {
+  0% {
+    transform: translateX(-100px) translateY(0px);
+  }
+  25% {
+    transform: translateX(25vw) translateY(-10px);
+  }
+  50% {
+    transform: translateX(50vw) translateY(5px);
+  }
+  75% {
+    transform: translateX(75vw) translateY(-5px);
+  }
+  100% {
+    transform: translateX(calc(100vw + 100px)) translateY(0px);
+  }
+}
+
+.animate-float-slow {
+  animation: float-across 25s linear infinite;
+}
+
+.animate-float-medium {
+  animation: float-across 30s linear infinite;
+}
+
+.animate-float-fast {
+  animation: float-across 20s linear infinite;
+}

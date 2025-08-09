@@ -24,10 +24,47 @@ function App() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 transition-colors duration-300">
+      {/* Flying Background Images */}
+      <div className="fixed inset-0 pointer-events-none z-0">
+        <img 
+          src="https://images.pexels.com/photos/158163/clouds-cloudporn-weather-lookup-158163.jpeg?auto=compress&cs=tinysrgb&w=200&h=100" 
+          alt="" 
+          className="absolute w-32 h-16 opacity-20 animate-float-slow"
+          style={{
+            top: '20%',
+            left: '-10%',
+            animationDelay: '0s',
+            animationDuration: '25s'
+          }}
+        />
+        <img 
+          src="https://images.pexels.com/photos/158163/clouds-cloudporn-weather-lookup-158163.jpeg?auto=compress&cs=tinysrgb&w=150&h=75" 
+          alt="" 
+          className="absolute w-24 h-12 opacity-15 animate-float-medium"
+          style={{
+            top: '60%',
+            left: '-8%',
+            animationDelay: '8s',
+            animationDuration: '30s'
+          }}
+        />
+        <img 
+          src="https://images.pexels.com/photos/158163/clouds-cloudporn-weather-lookup-158163.jpeg?auto=compress&cs=tinysrgb&w=180&h=90" 
+          alt="" 
+          className="absolute w-28 h-14 opacity-25 animate-float-fast"
+          style={{
+            top: '40%',
+            left: '-12%',
+            animationDelay: '15s',
+            animationDuration: '20s'
+          }}
+        />
+      </div>
+      
       <ThemeToggle />
       
       {/* Header */}
-      <header className="py-12 text-center">
+      <header className="py-12 text-center relative z-10">
         <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-blue-400 dark:to-indigo-400 bg-clip-text text-transparent mb-4">
           Button Gallery
         </h1>
@@ -37,7 +74,7 @@ function App() {
       </header>
 
       {/* Main Content */}
-      <main className="max-w-6xl mx-auto px-4 pb-16">
+      <main className="max-w-6xl mx-auto px-4 pb-16 relative z-10">
         
         {/* Primary Buttons */}
         <section className="mb-16">
@@ -192,7 +229,7 @@ function App() {
       </main>
 
       {/* Footer */}
-      <footer className="text-center py-8 text-gray-600 dark:text-gray-400">
+      <footer className="text-center py-8 text-gray-600 dark:text-gray-400 relative z-10">
         <p>Crafted with attention to detail and smooth interactions</p>
       </footer>
     </div>
